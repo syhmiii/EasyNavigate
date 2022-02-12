@@ -8,19 +8,19 @@ This project also may potentially allow for more interactivity between the user 
 
 This project will consist of features listed below -
 
-### *1. Generate Words*
-    This feature will be able to generate random words for the users to use them in a game where they will learn the meanings and pronounciation of it.
+ 1. ### *Generate Words*
+     - This feature will be able to generate random words for the users to use them in a game where they will learn the meanings and pronounciation of it.
 
 2. 
 ## **Testing**
 
 This project will consist of activities/exercises listed below -
-### *1. Word Fishing*
-    A simple game where users have to pick a word that they have to pronounce later on. The game then will display the meanings and showcase the pronounciation. This feature is very 
+1. ### *Word Fishing*
+     - A simple game where users have to randomly generate a word that they have to pronounce later on. The game then will display the meanings and showcase the pronounciation. This feature is very beneficial for teacher/parents to introduce it to their students/children for a relaxed experience education the younger ones.
 
 ## **Technologies**
-- ### JavaScript (JS)
-- ### Cascading Styles Sheet (CSS)
-- ### Hyper Text Markup Language (HTML)
+- #### JavaScript (JS)
+- #### Cascading Styles Sheet (CSS)
+- #### Hyper Text Markup Language (HTML)
 
 
