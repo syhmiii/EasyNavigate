@@ -1,22 +1,22 @@
-# **Little Minds**
+# **Guess The Meaning**
 
-This is a simple project created by my friend and I, Luismika and Syahmi respectively. Kids definitely would love to have a fun and enjoyable time exploring websites. The main aim of this project is for little children to start learning their basic foundation in a simple and interactive way that helps them to gain more knowledge in a fun way.
+This is a simple project created by my friend and I, Luismika and Syahmi respectively. English is always used for speaking and writing in Singapore. There are definitely words that some people may not be familiar with at all or never even heard of it. This project will allow them to have an opportunity to guess the meanings of the words they weant to know more about and have them listen to the pronounciation if necessary.
 
-This project also may potentially allow for more interactivity between the user and the website than other websites even though it is mainly for little children. This is because of how the website is made to look very attractive towards them and how easy to follow even if the child is not that familiar with websites.
+It will be easy to use and follow for people from different age groups and backgrounds to gain more knowledge and learn new things to apply them in the future when it is needed, be it spoken english or writing a report.
 
 ## **Features**
 
 This project will consist of features listed below -
 
- 1. ### *Generate Words*
-     - This feature will be able to generate random words for the users to use them in a game where they will learn the meanings and pronounciation of it.
+ 1. ### *1 Minute Timer*
+     - This feature will be able to show users how much time is remaining to complete the exercise before going on to the next part
 
 2. 
 ## **Testing**
 
 This project will consist of activities/exercises listed below -
-1. ### *Word Fishing*
-     - A simple game where users have to randomly generate a word that they have to pronounce later on. The game then will display the meanings and showcase the pronounciation. This feature is very beneficial for teacher/parents to introduce it to their students/children for a relaxed experience education the younger ones.
+1. ### *Search Words*
+     - Users input a word that they are currently searching up for meanings and examples. 
 
 ## **Technologies**
 - #### JavaScript (JS)
