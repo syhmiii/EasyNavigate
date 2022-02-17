@@ -21,8 +21,8 @@ function wordSearch() {
             word.innerHTML = data[1].word;      //  get a random definition
             definition.innerHTML = data[1].text;
         } else {
-            word.innerHTML = "Error";
-            definition.innerHTML = "Error";
+            word.innerHTML = "Reset and try searching again!";
+            definition.innerHTML = "Definition not found.";
         }
     }
     request1.send();
@@ -34,7 +34,7 @@ function wordSearch() {
         if (request2.status >= 200 && request2.status < 400) {
             example.innerHTML = data2.text;
         } else {
-            example.innerHTML = "Error";
+            example.innerHTML = "Example not found.";
         }
     }
     request2.send();
@@ -51,8 +51,24 @@ function wordSearch() {
             spell.appendChild(audio);
 
         } else {
-            spell.innerHTML = "Error";
+            spell.innerHTML = "No pronounciation found.";
         }
     }
     request3.send();
 }
+
+function hideFirstPart() {
+    
+    var x = document.getElementById('firstContainer');
+    var y = document.getElementById('secondContainer');
+    if (x.style.display == "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+
+    }
+}
+
+

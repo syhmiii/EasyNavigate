@@ -5,7 +5,6 @@
 body {
     padding: 0;
     margin: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 207vh;
@@ -14,19 +13,22 @@ body {
     font-family: 'Segoe UI';
 } 
 
-.firstContainer {
+#firstContainer {
     width: 800px;
     max-width: 30%;
     background-color: white;
+    margin: 120px 0 120px 545px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px 2px;
 }
 
-.secondContainer {
+#secondContainer {
+    display: none;
     width: 800px;
     max-width: 30%;
     background-color: white;
+    margin: 120px 0 120px 545px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px 2px;
@@ -38,12 +40,12 @@ section {
     flex-direction: column;
 }
 
-section .searchForm h1 {
+h1 {
     display: flex;
     justify-content: center;
     font-size: 40px;
     padding: 0px 0px;
-    margin: 40px 0px 15px 0px;
+    margin: 30px 0px 15px 0px;
     font-weight: 500;
 }
 
@@ -120,3 +122,29 @@ section .searchResult div h1 {
 section .searchResult div p {
     font-size: 28px;
 }
+
+#list-nav {
+    display: inline-block;
+    list-style-type: none;
+    width: 525px;
+    margin-left: 34%;
+    font-size: 130%;
+}
+
+#list-nav li a {
+    text-decoration: none;
+    padding: 10px 0;
+    width: 160px;
+    background: #333;
+    color: #eee;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+#list-nav li a:hover {
+    background: #a2b3a1;
+    color: #000
+}
+
+  
