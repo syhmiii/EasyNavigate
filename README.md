@@ -16,7 +16,7 @@ This project will consist of features listed below -
 
 This project will consist of activities/exercises listed below -
 1. ### *Search Words*
-     - Users input a word that they are currently searching up for meanings and examples. 
+     - Users input a word that they are currently searching up for meanings and examples.
 
 ## **Technologies**
 - #### JavaScript (JS)
