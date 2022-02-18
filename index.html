@@ -8,31 +8,61 @@
     <title>Fun with Words Adventure</title>
 </head>
 <body>
-    <div>
-        <ul id="list-nav">
-            <li><a href="index.html">Dictionary</a></li>
-            <li><a href="speedtyping/speedtype.html">Speed Typing</a></li>
-            <li><a href="#">Wordly</a></li>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Little Minds <img src="/Images/ABC blocks.png" alt="Logo" class="navlogo"></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="About/about.html">About</a></li>
+            <li class="games">
+            <a href="Games/games.html">Games</a>
+            <!-- DROPDOWN MENU -->
+            <ul class="dropdown">
+                <li><a href="/index.html">Dictionary</a></li>
+                <li><a href="/speedtyping/speedtype.html">Speed Typing</a></li>
+            </ul>
+            <li><a href="/">Reviews</a></li>
+            </div>
         </ul>
-    </div>
+    </nav>
     <div id="firstContainer">
         <section>
             <form class="searchForm">
                 <h1>Word Adventure!</h1>
                 <input type="search" name="searchBox" id="searchBox" placeholder="search for word...">
-                <input type="button" name="submit" value="See example" onclick="hideFirstPart(); wordSearch();">
+                <input type="button" name="submit" id = "anim" value="Definition >"  onclick="hideElement('firstContainer', 'secondContainer'); wordSearch();">
             </form>
         </section>
     </div>
-    
-    <div id="secondContainer">
-        <section>
-            <h1>Guess The Meaning</h1>
-            <div>
-                <h1>Example</h1>
-                <p id="example"></p>
-            </div>
-        </section>
+    <div class="loading">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
     </div>
+    <div>
+        <div class="searchResult" id="searchResult">
+            <div id="secondContainer">
+                <h1 id="word"> </h1>
+                <p id="definition"></p>
+                <input type="button" name="submit" value="See Example >" onclick="hideElement('secondContainer', 'egContainer');">
+            </div>
+            <div class="loading">
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            </div>
+            <div id="egContainer">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        All rights reserved © <br>
+        Syahmi & Luismika
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="Checkpoint 2/javascript.js"></script>
 </body>

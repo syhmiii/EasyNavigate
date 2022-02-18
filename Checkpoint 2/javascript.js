@@ -8,7 +8,6 @@ function wordSearch() {
     var word = document.getElementById('word');
     var definition = document.getElementById('definition');
     var example = document.getElementById('example');
-    var spell = document.getElementById('spell');
 
     var wordToSearch = document.getElementById('searchBox').value;
 
@@ -17,12 +16,15 @@ function wordSearch() {
     request1.onload = function () {
         var data = JSON.parse(this.response);
         if (request1.status >= 200 && request1.status < 400) {
-            var i = Math.ceil(Math.random() * 10);      //  get a random number from 1 to 10
             word.innerHTML = data[1].word;      //  get a random definition
             definition.innerHTML = data[1].text;
+            while (definition.innerHTML == 'undefined') {
+                var i = Math.ceil(Math.random() * 10);
+                definition.innerHTML = data[i].text
+            }
         } else {
-            word.innerHTML = "Reset and try searching again!";
-            definition.innerHTML = "Definition not found.";
+            word.innerHTML = "Error.";
+            reloadPage()
         }
     }
     request1.send();
@@ -39,6 +41,14 @@ function wordSearch() {
     }
     request2.send();
 
+}
+function audioGet() {
+    document.getElementById('searchResult').style.visibility = 'visible';
+    
+    var spell = document.getElementById('spell');
+
+    var wordToSearch = document.getElementById('searchBox').value;
+
     var request3 = new XMLHttpRequest();
     request3.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/audio?useCanonical=false&limit=50&api_key=dfd7g7h7no3wd9ytjgwa7picrxaapv6kqgxw5zjz5pxsdfmbv ', true);
     request3.onload = function () {
@@ -51,24 +61,27 @@ function wordSearch() {
             spell.appendChild(audio);
 
         } else {
-            spell.innerHTML = "No pronounciation found.";
+            reloadPage()
         }
     }
     request3.send();
 }
-
-function hideFirstPart() {
+function hideElement(firstElement, secondElement) {
     
-    var x = document.getElementById('firstContainer');
-    var y = document.getElementById('secondContainer');
-    if (x.style.display == "none") {
-      x.style.display = "block";
-      y.style.display = "none";
-    } else {
-      x.style.display = "none";
-      y.style.display = "block";
+    var x = document.getElementById(firstElement);
+    var y = document.getElementById(secondElement);
+    var load = document.getElementsByClassName('loading');
+    var anim = document.getElementById('anim');
 
-    }
+    anim.addEventListener('click', () => {
+        load.style.display = "block";
+        x.style.display = "none";
+
+        setTimeout(() => {
+            y.style.display = "block"
+        }, 1000)
+    })
 }
+
 
 
