@@ -113,6 +113,10 @@ input[type=checkbox]:checked ~ .menu{
 .dropdown li:hover {
  background-color: rgb(35, 49, 110);
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 }
 .content{
     text-align: center;
@@ -161,4 +165,30 @@ body{
 .navlogo{
     height: 50px;
     width: 50px;
+}
+.row {
+    display: flex;
+    margin:20px;
+}
+  
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+#keyboard{
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+#crossword{
+    height: 300px;
+    width: 300px;
+}
+#dictionary{
+    height: 300px;
+    width: 300px;
+}
+.game-label{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
 }
