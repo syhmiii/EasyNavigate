@@ -70,7 +70,7 @@ function hideElement(firstElement, secondElement) {
     
     var x = document.getElementById(firstElement);
     var y = document.getElementById(secondElement);
-    var load = document.getElementsByClassName('loading');
+    var load = document.getElementById('loading');
     var anim = document.getElementById('anim');
 
     anim.addEventListener('click', () => {

@@ -131,7 +131,7 @@ section .searchResult div h1 {
 section .searchResult div p {
     font-size: 28px;
 }
-.loading {
+#loading, #loading2 {
     display: none;
     position: absolute;
     left: 50%;
@@ -147,6 +147,7 @@ section .searchResult div p {
     left: 43%;
     bottom: 0px;
 }
+
 .navlogo{
     height: 50px;
     width: 50px;
