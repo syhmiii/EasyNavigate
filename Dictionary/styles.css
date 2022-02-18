@@ -104,8 +104,8 @@ section .searchForm input[type=button]:hover, .searchResult input[type=button]:h
     background-color: #f1a566;
 }
 
-section .searchForm input[type=reset] {
-    margin: 0px 0px;
+.searchResult input[type=reset] {
+    margin: 0px 240px;
     padding: 15px 40px;
     background-color: #f3b786;
     color: #fff;
@@ -117,12 +117,14 @@ section .searchForm input[type=reset] {
     outline: none;
 }
 
-section .searchForm input[type=reset]:hover {
+.searchResult input[type=reset]:hover {
     box-shadow: 5px 5px 15px #aaa;
     background-color: #f1a566;
 }
 
- 
+ #error {
+    display: none;
+ }
 
 section .searchResult div h1 {
    font-size: 35px;
@@ -131,13 +133,16 @@ section .searchResult div h1 {
 section .searchResult div p {
     font-size: 28px;
 }
-#loading, #loading2 {
+#loading, #loading2, #loading3 {
     display: none;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
+}
+p {
+    font-size: 18px;
 }
 .footer{
     margin: 20px;

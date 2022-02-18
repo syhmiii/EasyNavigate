@@ -1,68 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name ="viewport" content="width=device-width,
-    initial-scale=1.0">
-    <link href="styles.css" type="text/css" rel="stylesheet">
-    <title>Fun with Words Adventure</title>
-</head>
-<body>
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo">Little Minds <img src="/Images/ABC blocks.png" alt="Logo" class="navlogo"></div>
-        <!-- NAVIGATION MENU -->
-        <ul class="nav-links">
-            <!-- USING CHECKBOX HACK -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <!-- NAVIGATION MENUS -->
-            <div class="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="About/about.html">About</a></li>
-            <li class="games">
-            <a href="Games/games.html">Games</a>
-            <!-- DROPDOWN MENU -->
-            <ul class="dropdown">
-                <li><a href="/index.html">Dictionary</a></li>
-                <li><a href="/speedtyping/speedtype.html">Speed Typing</a></li>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="About/about.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">Little Minds <img src="/Images/ABC blocks.png" alt="Logo" class="navlogo"></div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About/about.html">About</a></li>
+                <li class="games">
+                <a href="Games/games.html">Games</a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
+                    <li><a href="Dictionary/dictionary.html">Dictionary</a></li>
+                    <li><a href="Speedtyping/speedtype.html">Speed Typing</a></li>
+                </ul>
+                </div>
             </ul>
-            <li><a href="/">Reviews</a></li>
+        </nav>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="/Images/grade.jpg" style="width:100%">
+                <div class="text">Testimonials</div>
             </div>
-        </ul>
-    </nav>
-    <div id="firstContainer">
-        <section>
-            <form class="searchForm">
-                <h1>Word Adventure!</h1>
-                <input type="search" name="searchBox" id="searchBox" placeholder="search for word...">
-                <input type="button" name="submit" id = "anim" value="Definition >"  onclick="hideElement('firstContainer', 'secondContainer'); wordSearch();">
-            </form>
-        </section>
-    </div>
-    <div id="loading">
-        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-    </div>
-    <div>
-        <div class="searchResult" id="searchResult">
-            <div id="secondContainer">
-                <h1 id="word"> </h1>
-                <p id="definition"></p>
-                <input type="button" name="submit" value="See Example >" onclick="hideElement('secondContainer', 'egContainer');">
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="/Images/classroom.png" style="width:100%">
+                <div class="text">Testimonials</div>
             </div>
-            <div id="loading2">
-                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="/Images/sillhouette.jpg" style="width:100%">
+                <div class="text">Testimonials</div>
             </div>
-            <div id="egContainer">
-                
-            </div>
+
         </div>
-    </div>
-    
-    <div class="footer">
-        All rights reserved © <br>
-        Syahmi & Luismika
-    </div>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="Checkpoint 2/javascript.js"></script>
-</body>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+    </body>
+</html> 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <title>Fun with Words Adventure</title>
+    <script src="Checkpoint 2/javascript.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Little Minds <img src="/Images/ABC blocks.png" alt="Logo" class="navlogo"></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/About/about.html">About</a></li>
+            <li class="games">
+            <a href="/Games/games.html">Games</a>
+            <!-- DROPDOWN MENU -->
+            <ul class="dropdown">
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="/Speedtyping/speedtype.html">Speed Typing</a></li>
+            </ul>
+            </div>
+        </ul>
+    </nav>
+    <div id="firstContainer">
+        <section>
+            <form class="searchForm">
+                <h1>Word Adventure!</h1>
+                <input type="search" name="searchBox" id="searchBox" placeholder="search for word...">
+                <input type="button" name="submit" id = "anim" value="Definition >"  onclick="hideElement('firstContainer', 'secondContainer', 'loading', 'anim'); wordSearch();">
+            </form>
+        </section>
+    </div>
+    <div id="loading">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+    <div>
+        <div class="searchResult" id="searchResult"> 
+            <div id="secondContainer">
+                <h1 id="word"> </h1>
+                <p id="definition"></p>
+                <input type="button" name="submit" id="anim2" value="See Example >" onclick="hideElement('secondContainer', 'egContainer', 'loading2', 'anim2');">
+                <input type="button" id="error" value="Search again >" onclick="reloadPage('secondContainer', 'loading2', 'error');">
+            </div>
+            <div id="loading2">
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            </div>
+            <div id="egContainer">
+                <h1> Example </h1>
+                <p id="example"></p>
+                <input type="button" name="submit" id="anim4" value="Pronounce it together" onclick="audioGet()">
+                <input type="reset" value="Reset" id= "anim3" onclick="reloadPage('egContainer', 'loading3', 'anim3')">
+            </div>
+            <div id="loading3">
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        All rights reserved © <br>
+        Syahmi & Luismika
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+</body>

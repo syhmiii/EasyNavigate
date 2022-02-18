@@ -1,4 +1,21 @@
-function reloadPage() {
+function reloadPage(hideElement, load, animation) {
+    var x = document.getElementById(hideElement);
+    var load = document.getElementById(load);
+    var anim = document.getElementById(animation);
+
+    anim.addEventListener('click', () => {
+        load.style.display = "block";
+        x.style.display = "none";
+
+        setTimeout(() => {
+            location.reload();
+            load.style.display ="none";
+        }, 7000)
+    })
+    
+}
+
+function errorReload() {
     location.reload();
 }
 
@@ -23,8 +40,9 @@ function wordSearch() {
                 definition.innerHTML = data[i].text
             }
         } else {
-            word.innerHTML = "Error.";
-            reloadPage()
+            word.innerHTML = "Word not found.";
+            document.getElementById('anim2').style.display = "none";
+            document.getElementById('error').style.display = "block";
         }
     }
     request1.send();
@@ -36,7 +54,8 @@ function wordSearch() {
         if (request2.status >= 200 && request2.status < 400) {
             example.innerHTML = data2.text;
         } else {
-            example.innerHTML = "Example not found.";
+            document.getElementById('anim2').style.display = "none";
+            document.getElementById('error').style.display = "block";
         }
     }
     request2.send();
@@ -61,25 +80,27 @@ function audioGet() {
             spell.appendChild(audio);
 
         } else {
-            reloadPage()
+            document.getElementById('anim2').style.display = "none";
+            document.getElementById('error').style.display = "block";
         }
     }
     request3.send();
 }
-function hideElement(firstElement, secondElement) {
+function hideElement(hideElement, showElement, load, animation) {
     
-    var x = document.getElementById(firstElement);
-    var y = document.getElementById(secondElement);
-    var load = document.getElementById('loading');
-    var anim = document.getElementById('anim');
+    var x = document.getElementById(hideElement);
+    var y = document.getElementById(showElement);
+    var load = document.getElementById(load);
+    var anim = document.getElementById(animation);
 
     anim.addEventListener('click', () => {
         load.style.display = "block";
         x.style.display = "none";
 
         setTimeout(() => {
-            y.style.display = "block"
-        }, 1000)
+            y.style.display = "block";
+            load.style.display ="none";
+        }, 2000)
     })
 }
 
