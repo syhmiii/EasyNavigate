@@ -4,8 +4,6 @@ This is a simple project created by my friend and I, Luismika and Syahmi respect
 
 It will be easy to use and follow for people from different age groups and backgrounds to gain more knowledge and learn new things to apply them in the future when it is needed, be it spoken english or writing a report.
 
-Access the website here! [Little Minds](https://syhmiii.github.io/Little-Minds/). 
-
 Demo of our website is available here! [Demo](https://drive.google.com/file/d/1VTHZjyy8iiQOAcHOpqLAYoT4ox_SQIbr/view?usp=sharing)
 ## **Features**
 
@@ -13,10 +11,6 @@ This project will consist of features listed below -
 
 1. ### *High Score*
      - This feature is specifically for our speed typing game that is available on our website, which allows them to keep their high score no matter what even if they had reloaded it.
-
-2. ###
-
-2. 
 ## **Testing**
 
 This project will consist of activities/exercises listed below -
