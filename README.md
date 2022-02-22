@@ -1,4 +1,4 @@
-# **GLittle Minds**
+# **Little Minds**
 
 This is a simple project created by my friend and I, Luismika and Syahmi respectively. English is always used for speaking and writing in Singapore. There are definitely words that some people may not be familiar with at all or never even heard of it. This project will allow them to have an opportunity to guess the meanings of the words they weant to know more about and have them listen to the pronounciation if necessary.
 
